@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row center-align">
+        <h3 class="title">Optical Flow Analysis Complete</h3>
+        <p>Here is the result of your video processing.</p>
+    </div>
+
+    <div class="row center-align">
+        <div class="col s12 m6 l6">
+            <h5>Processed Optical Flow GIF</h5>
+            <img src="{{ url_for('static', filename='output/result_video.gif') }}" alt="Processed Optical Flow" class="responsive-img">
+        </div>
+    </div>
+
+    <div class="row center-align">
+        <a href="{{ url_for('static', filename='output/result_video.gif') }}" class="btn waves-effect waves-light green" download>Download Result GIF</a>
+    </div>
+
+{% endblock %}
